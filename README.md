@@ -1,6 +1,11 @@
 ## File-Transmission-System-with-SOLID-Principle-Analysis
 The file transmission system consists of a sender and a receiver, user can run and open multiple program windows on one computer at the same time to simulate senders and receivers. Sockets are used for file transfers, and each task supports multiple files transmission at the same time, and many tasks can occur at the same time period. Both the sender and the receiver can query, pause and start the file transmission.
 
+* Language: Java 8
+* Integrated Development Environment (IDE): IntelliJ IDEA
+* Configuration - JDK Version: 1.8 Oracle OpenJDK version 1.8.0_333
+
+
 ## 1. How to Use
 <div align=center><img src="https://github.com/WangHewei16/File-Transmission-System-with-SOLID-Principle-Analysis/blob/main/Figures/Connect%20Client%20to%20Server.png?raw=true" width="380"/></div>
 
