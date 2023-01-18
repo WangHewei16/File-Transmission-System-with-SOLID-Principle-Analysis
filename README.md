@@ -1,9 +1,9 @@
 ## File-Transmission-System-with-SOLID-Principle-Analysis
 The file transmission system consists of a sender and a receiver, user can run and open multiple program windows on one computer at the same time to simulate senders and receivers. Sockets are used for file transfers, and each task supports multiple files transmission at the same time, and many tasks can occur at the same time period. Both the sender and the receiver can query, pause and start the file transmission.
 
-* Language: Java 8
-* Integrated Development Environment (IDE): IntelliJ IDEA
-* JDK Version: 1.8 Oracle OpenJDK version 1.8.0_333
+* ***Language***: Java 8
+* ***Integrated Development Environment (IDE)***: IntelliJ IDEA
+* ***JDK Version***: 1.8 Oracle OpenJDK version 1.8.0_333
 
 
 ## 1. How to Use
@@ -57,18 +57,28 @@ Figure below(a) shows several tasks are being transmitted with different statuse
 <div align=center><img src="https://github.com/WangHewei16/File-Transmission-System-with-SOLID-Principle-Analysis/blob/main/Figures/Multi-task%20Transmission.png?raw=true" width="700"/></div>
 
 
-## 3. SOLID Principles Analysis
-### 3.1 Single Responsibility Principle
+## 4. SOLID Principles Analysis
+### 4.1 Single Responsibility Principle
+In a good example, Figure below shows two kinds of messages are written into two classes and extend to a BaseMessage class. **TransMessage** is used to transmit basic instructions and **InfoMessage** is used to update task status. Each class only has one reason to change, and its cohesion is high. These designs confirm the SRP and are a good embodiment of SRP. Reading my program code, you can find that SRP is very consistent in my program!
+
 <div align=center><img src="https://github.com/WangHewei16/File-Transmission-System-with-SOLID-Principle-Analysis/blob/main/Figures/SRP.png?raw=true" width="300"/></div>
 
-### 3.2 Open Close Principle
+### 4.2 Open Close Principle
+In a good example, we can add a new class related to a thread without modifications by inheriting the Thread directly. It finds an abstraction for what is common in the variation firstly, then use polymorphism to add varying behavior, so it confirms to OCP. Figure below shows the design idea in our program.
+
 <div align=center><img src="https://github.com/WangHewei16/File-Transmission-System-with-SOLID-Principle-Analysis/blob/main/Figures/OCP.png?raw=true" width="280"/></div>
 
-### 3.3 Liskov Substitution Principle
+### 4.3 Liskov Substitution Principle
+In a good example, four classes use their own functions and only use the function of the parent class in their own functions. In this way, the subclass can still replace the parent class. Figure below shows a good example of LSP.
+
 <div align=center><img src="https://github.com/WangHewei16/File-Transmission-System-with-SOLID-Principle-Analysis/blob/main/Figures/LSP.png?raw=true" width="300"/></div>
 
-### 3.4 Interface Segregation Principle
+### 4.4 Interface Segregation Principle
+In a good example, three classes implement their corresponding interface. They only implement the function they need. Hence, this is in line with the ISP principle. Figure below shows a good example of an ISP.
+
 <div align=center><img src="https://github.com/WangHewei16/File-Transmission-System-with-SOLID-Principle-Analysis/blob/main/Figures/ISP.png?raw=true" width="300"/></div>
 
-### 3.5 Dependency Inversion Principle
+### 4.5 Dependency Inversion Principle
+In a good example, Trans related interface is set between thread related class and message related class. In this way, **thread** doesn't care about the encapsulation of the message. It just needs to send the message to **trans**, which will be responsible for the encapsulation of **message**. High-level modules and low-level modules both depend on an abstraction interface. FileThread class depends on the FileTrans interface and FileTransImpl class implements the FileTrans interface. InfoThread class depends on the InfoTrans interface and InfoTransImpl class implements the InfoTrans interface. It makes high-level modules not depend on low-level modules and both depend on abstractions. These two interfaces do not depend on every class, which confirms that "Abstractions should not depend on details. Details should depend on abstractions". These designs conform to DIP. Figure below shows a good example of DIP. 
+
 <div align=center><img src="https://github.com/WangHewei16/File-Transmission-System-with-SOLID-Principle-Analysis/blob/main/Figures/DIP.png?raw=true" width="500"/></div>
