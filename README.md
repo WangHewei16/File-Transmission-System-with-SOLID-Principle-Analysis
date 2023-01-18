@@ -15,7 +15,7 @@ The file transmission system consists of a sender and a receiver, user can run a
 * ***Step 3: Send Files to Receiver***: In the second UI, you could input the IP address and port number of your target receiver, choose the files that you want to transmit, and input the task name. Then you could click "Send" to transmit the task. Figure below shows this step.
 <div align=center><img src="https://github.com/WangHewei16/File-Transmission-System-with-SOLID-Principle-Analysis/blob/main/Figures/Send%20Files%20to%20Receiver.png?raw=true" width="380"/></div>
 
-* ***Step 4: Query Task Condition / Pause / Continue***: You could input the task name to do these operations, if the status is finished, you could click the ``Query" button to see the task list and file list. Task name and status will be shown in the task list. If the status is transmitting, you could click ``Pause" button to pause the transmission, and click ``Continue" button to continue transmitting files in this task. Figure below shows this step.
+* ***Step 4: Query Task Condition / Pause / Continue***: You could input the task name to do these operations, if the status is finished, you could click the "Query" button to see the task list and file list. Task name and status will be shown in the task list. If the status is transmitting, you could click "Pause" button to pause the transmission, and click ``Continue" button to continue transmitting files in this task. Figure below shows this step.
 <div align=center><img src="https://github.com/WangHewei16/File-Transmission-System-with-SOLID-Principle-Analysis/blob/main/Figures/Query:Pause:Continue.png?raw=true" width="380"/></div>
 
 ## 2. Program Running Result
