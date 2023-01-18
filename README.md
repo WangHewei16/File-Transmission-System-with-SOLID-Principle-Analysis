@@ -7,8 +7,13 @@ The file transmission system consists of a sender and a receiver, user can run a
 ## Architecture Design Idea
 
 ### Server Design
+<div align=center><img src="https://github.com/WangHewei16/File-Transmission-System-with-SOLID-Principle-Analysis/blob/main/Figures/Server%20Design%20Diagram.png?raw=true" width="700"/></div>
+
 ### Client Design
+<div align=center><img src="https://github.com/WangHewei16/File-Transmission-System-with-SOLID-Principle-Analysis/blob/main/Figures/Client%20Design%20Diagram.png?raw=true" width="700"/></div>
+
 ### Design principle of multi-task transmission at the same time
+<div align=center><img src="https://github.com/WangHewei16/File-Transmission-System-with-SOLID-Principle-Analysis/blob/main/Figures/C:S%20Architecture%20Diagram.png?raw=true" width="700"/></div>
 
 
 ## SOLID Principles Analysis
