@@ -32,14 +32,27 @@ If a task's status has been **Finish**, user click the "Pause" button, program w
 ## 3. Architecture Design Idea
 
 ### 3.1 Server Design
+* ***The Application layer*** is used for application startup and listening of connection, listening and receiving client connections through Entrance.
+* ***The Transmission layer*** is used for forward, where the server only acts as an intermediary to break the private network barriers and forward commands or files to the target client.
+* ***The File layer*** is used to encode and decode binary byte streams into serializable objects that are suitable for different transport services. This layer contains InfoMessage class that applies to InfoThread and TransMessage class that applies to FileThread. TransMessage is used to transmit basic instructions, and InfoMessage is used to update the task status.
+
 <div align=center><img src="https://github.com/WangHewei16/File-Transmission-System-with-SOLID-Principle-Analysis/blob/main/Figures/Server%20Design%20Diagram.png?raw=true" width="300"/></div>
 
 ### 3.2 Client Design
+* ***The Application layer*** is used for application startup and UI interface.
+
+* ***The Transmission layer*** is used for file transmission and contains the FileThread and InfoThread that transfer files and instructions, which hold the pipeline resources from the time the connection is established until the connection is disconnected.  InfoThread is to get the status of the file transmission and FileThread is to transmit the file. ConnectTransImpl provides the application layer Connection Services. FileTrans and InfoTrans interfaces are implemented by FileTransImpl and InfoTransImpl respectively. The design of this part is a good example of the dependency inversion principle (DIP).
+
+* ***The File layer*** is used to encode and decode binary byte streams into serializable objects that are suitable for different transport services. This layer contains FileTransImpl provides services related to file transmission and InfoTransImpl provides services related to information transmission. InfoMessage class applies to InfoThread and TransMessage class applies to FileThread. TransMessage is used to transmit basic instructions and InfoMessage is used to update the task status.
+
 <div align=center><img src="https://github.com/WangHewei16/File-Transmission-System-with-SOLID-Principle-Analysis/blob/main/Figures/Client%20Design%20Diagram.png?raw=true" width="500"/></div>
 
 ### 3.3 Design principle of multi-task transmission at the same time
+After connecting to the server, a communication thread **InfoThread** will always be maintained for instruction transmission. Also, during connection initialization, we will maintain multiple transmission threads **FileThread** at the same time, the number depends on the maximum number of concurrency, each transmission thread can parallelize tasks at the same time without waiting for each other, thus realizing multi-task transmission. InfoThread is to get the status of the file transmission and FileThread is to transmit the file. Figure below shows the Client/Server architecture diagram in my program that supports the simultaneous transmission of multiple tasks. 
+
 <div align=center><img src="https://github.com/WangHewei16/File-Transmission-System-with-SOLID-Principle-Analysis/blob/main/Figures/C:S%20Architecture%20Diagram.png?raw=true" width="300"/></div>
 
+Figure below(a) shows several tasks are being transmitted with different statuses when querying many tasks' statuses one by one. It also shows that multiple tasks are transferred in parallel to each other, while multiple files in a task are transferred serially. Figure below(b) shows all tasks finish the transmission. The maximum number of concurrent tasks is approximately 3 to 10, which depends on the size of the files.
 
 <div align=center><img src="https://github.com/WangHewei16/File-Transmission-System-with-SOLID-Principle-Analysis/blob/main/Figures/Multi-task%20Transmission.png?raw=true" width="700"/></div>
 
