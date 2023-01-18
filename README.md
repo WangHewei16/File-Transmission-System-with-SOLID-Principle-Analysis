@@ -4,7 +4,168 @@ The file transmission system consists of a sender and a receiver, user can run a
 * ***Language***: Java 8
 * ***Integrated Development Environment (IDE)***: IntelliJ IDEA
 * ***JDK Version***: 1.8 Oracle OpenJDK version 1.8.0_333
-
+```
+.
+|-- C
+|   |-- C.iml
+|   |-- 1
+|   |   |-- dubbo-governance.log
+|   |   `-- dump.rdb
+|   |-- out
+|   |   `-- production
+|   |       `-- C
+|   |           |-- MainFunction.class
+|   |           |-- handler
+|   |           |   |-- FileUtils.class
+|   |           |   `-- MyObjectOutputStream.class
+|   |           |-- manage
+|   |           |   |-- BaseStorage.class
+|   |           |   |-- ConnectStorage.class
+|   |           |   |-- FileStorage.class
+|   |           |   |-- PeerStorage.class
+|   |           |   `-- TaskStorage.class
+|   |           |-- pojo
+|   |           |   |-- BaseMessage.class
+|   |           |   |-- FileThread.class
+|   |           |   |-- InfoMessage.class
+|   |           |   |-- InfoThread.class
+|   |           |   |-- Peer.class
+|   |           |   |-- Task.class
+|   |           |   `-- TransMessage.class
+|   |           |-- trans
+|   |           |   |-- ConnectTrans.class
+|   |           |   |-- ConnectTransImpl.class
+|   |           |   |-- FileTrans.class
+|   |           |   |-- FileTransImpl.class
+|   |           |   |-- InfoTrans.class
+|   |           |   `-- InfoTransImpl.class
+|   |           `-- view
+|   |               |-- ConnectGUI$1.class
+|   |               |-- ConnectGUI.class
+|   |               |-- MainGUI$1.class
+|   |               |-- MainGUI$2.class
+|   |               |-- MainGUI$3.class
+|   |               |-- MainGUI$4.class
+|   |               |-- MainGUI$5.class
+|   |               |-- MainGUI$6.class
+|   |               |-- MainGUI.class
+|   |               `-- MyDialog.class
+|   `-- src
+|       |-- MainFunction.java
+|       |-- handler
+|       |   |-- FileUtils.java
+|       |   `-- MyObjectOutputStream.java
+|       |-- manage
+|       |   |-- BaseStorage.java
+|       |   |-- ConnectStorage.java
+|       |   |-- FileStorage.java
+|       |   |-- PeerStorage.java
+|       |   `-- TaskStorage.java
+|       |-- pojo
+|       |   |-- BaseMessage.java
+|       |   |-- FileThread.java
+|       |   |-- InfoMessage.java
+|       |   |-- InfoThread.java
+|       |   |-- Peer.java
+|       |   |-- Task.java
+|       |   `-- TransMessage.java
+|       |-- trans
+|       |   |-- ConnectTrans.java
+|       |   |-- ConnectTransImpl.java
+|       |   |-- FileTrans.java
+|       |   |-- FileTransImpl.java
+|       |   |-- InfoTrans.java
+|       |   `-- InfoTransImpl.java
+|       `-- view
+|           |-- ConnectGUI.java
+|           |-- MainGUI.java
+|           `-- MyDialog.java
+|-- S
+|   |-- S.iml
+|   |-- out
+|   |   `-- production
+|   |       `-- S
+|   |           |-- App.class
+|   |           |-- manage
+|   |           |   `-- PeerStorage.class
+|   |           |-- pojo
+|   |           |   |-- BaseMessage.class
+|   |           |   |-- FileThread.class
+|   |           |   |-- InfoMessage.class
+|   |           |   |-- InfoThread.class
+|   |           |   |-- Peer.class
+|   |           |   |-- Task.class
+|   |           |   `-- TransMessage.class
+|   |           `-- trans
+|   |               `-- Entrance.class
+|   `-- src
+|       |-- App.java
+|       |-- manage
+|       |   `-- PeerStorage.java
+|       |-- pojo
+|       |   |-- BaseMessage.java
+|       |   |-- FileThread.java
+|       |   |-- InfoMessage.java
+|       |   |-- InfoThread.java
+|       |   |-- Peer.java
+|       |   |-- Task.java
+|       |   `-- TransMessage.java
+|       `-- trans
+|           `-- Entrance.java
+`-- out
+    `-- production
+        |-- C
+        |   |-- MainFunction.class
+        |   |-- handler
+        |   |   |-- FileUtils.class
+        |   |   `-- MyObjectOutputStream.class
+        |   |-- manage
+        |   |   |-- BaseStorage.class
+        |   |   |-- ConnectStorage.class
+        |   |   |-- FileStorage.class
+        |   |   |-- PeerStorage.class
+        |   |   `-- TaskStorage.class
+        |   |-- pojo
+        |   |   |-- BaseMessage.class
+        |   |   |-- FileThread.class
+        |   |   |-- InfoMessage.class
+        |   |   |-- InfoThread.class
+        |   |   |-- Peer.class
+        |   |   |-- Task.class
+        |   |   `-- TransMessage.class
+        |   |-- trans
+        |   |   |-- ConnectTrans.class
+        |   |   |-- ConnectTransImpl.class
+        |   |   |-- FileTrans.class
+        |   |   |-- FileTransImpl.class
+        |   |   |-- InfoTrans.class
+        |   |   `-- InfoTransImpl.class
+        |   `-- view
+        |       |-- ConnectGUI$1.class
+        |       |-- ConnectGUI.class
+        |       |-- MainGUI$1.class
+        |       |-- MainGUI$2.class
+        |       |-- MainGUI$3.class
+        |       |-- MainGUI$4.class
+        |       |-- MainGUI$5.class
+        |       |-- MainGUI$6.class
+        |       |-- MainGUI.class
+        |       `-- MyDialog.class
+        `-- S
+            |-- App.class
+            |-- manage
+            |   `-- PeerStorage.class
+            |-- pojo
+            |   |-- BaseMessage.class
+            |   |-- FileThread.class
+            |   |-- InfoMessage.class
+            |   |-- InfoThread.class
+            |   |-- Peer.class
+            |   |-- Task.class
+            |   `-- TransMessage.class
+            `-- trans
+                `-- Entrance.class
+```
 
 ## 1. How to Use
 * ***Step 1: Run Server***: Run the Server through "App.java" file in package "S".
