@@ -26,6 +26,9 @@ The file transmission system consists of a sender and a receiver, user can run a
 <div align=center><img src="https://github.com/WangHewei16/File-Transmission-System-with-SOLID-Principle-Analysis/blob/main/Figures/C:S%20Architecture%20Diagram.png?raw=true" width="300"/></div>
 
 
+<div align=center><img src="https://github.com/WangHewei16/File-Transmission-System-with-SOLID-Principle-Analysis/blob/main/Figures/Multi-task%20Transmission.png?raw=true" width="380"/></div>
+
+
 ## 3. SOLID Principles Analysis
 ### 3.1 Single Responsibility Principle
 <div align=center><img src="https://github.com/WangHewei16/File-Transmission-System-with-SOLID-Principle-Analysis/blob/main/Figures/SRP.png?raw=true" width="300"/></div>
