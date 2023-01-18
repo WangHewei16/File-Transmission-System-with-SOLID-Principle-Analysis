@@ -3,16 +3,20 @@ The file transmission system consists of a sender and a receiver, user can run a
 
 * Language: Java 8
 * Integrated Development Environment (IDE): IntelliJ IDEA
-* Configuration - JDK Version: 1.8 Oracle OpenJDK version 1.8.0_333
+* JDK Version: 1.8 Oracle OpenJDK version 1.8.0_333
 
 
 ## 1. How to Use
+* ***Step 1: Run Server***: Run the Server through "App.java" file in package "S".
 <div align=center><img src="https://github.com/WangHewei16/File-Transmission-System-with-SOLID-Principle-Analysis/blob/main/Figures/Connect%20Client%20to%20Server.png?raw=true" width="380"/></div>
 
+* ***Step 2: Connect Client to Server***: In the first UI, your IP address will be generated automatically. You could input your port number, then click the ``connect" button. Figure below shows this step. Assume port 2001 is the sender, and port 2022 is the receiver.
 <div align=center><img src="https://github.com/WangHewei16/File-Transmission-System-with-SOLID-Principle-Analysis/blob/main/Figures/Send%20Files%20to%20Receiver.png?raw=true" width="380"/></div>
 
+* ***Step 3: Send Files to Receiver***: In the second UI, you could input the IP address and port number of your target receiver, choose the files that you want to transmit, and input the task name. Then you could click "Send" to transmit the task. Figure below shows this step.
 <div align=center><img src="https://github.com/WangHewei16/File-Transmission-System-with-SOLID-Principle-Analysis/blob/main/Figures/Query:Pause:Continue.png?raw=true" width="380"/></div>
 
+You could input the task name to do these operations, if the status is finished, you could click the ``Query" button to see the task list and file list. Task name and status will be shown in the task list. If the status is transmitting, you could click ``Pause" button to pause the transmission, and click ``Continue" button to continue transmitting files in this task. Figure below shows this step.
 <div align=center><img src="https://github.com/WangHewei16/File-Transmission-System-with-SOLID-Principle-Analysis/blob/main/Figures/Four%20kinds%20of%20status%20during%20Transmission.png?raw=true" width="700"/></div>
 
 <div align=center><img src="https://github.com/WangHewei16/File-Transmission-System-with-SOLID-Principle-Analysis/blob/main/Figures/pop-up%20window.png?raw=true" width="380"/></div>
